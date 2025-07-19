@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get to know Rizal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary: #6b46c1;
+            --secondary: #805ad5;
+            --accent: #9f7aea;
+            --dark: #1a202c;
+            --darker: #12161e;
+            --text: #e2e8f0;
+        }
+        
+        body {
+            background-color: var(--dark);
+            color: var(--text);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.15;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: rgba(26, 32, 44, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(159, 122, 234, 0.5), transparent);
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Navigation -->
+    <nav class="bg-black bg-opacity-50 fixed w-full z-10 backdrop-blur-sm">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold gradient-text">About Me</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-300 hover:text-white transition">About</a>
+                    <a href="#interests" class="text-gray-300 hover:text-white transition">Interests</a>
+                    <a href="#photos" class="text-gray-300 hover:text-white transition">Photography</a>
+                    <a href="#contact" class="text-gray-300 hover:text-white transition">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-90 backdrop-blur-sm">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#about" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">About</a>
+                <a href="#interests" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Interests</a>
+                <a href="#photos" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Photography</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+   
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+            <div class="profile-photo-container w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-purple-500/30 shadow-lg">
+                <img src="https://i.ibb.co/zVZFTFPD/Screenshot-2025-07-17-075803.png" alt="Profile photo of me" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="text-center md:text-left">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    <span class="gradient-text">Hey, I'm</span> <span class="text-white">Rizal Hassya Setyawan.</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 max-w-3xl">
+                    I'm a 12 grader on one of the eldest senior high school in Jogjakarta. passionate about coding, math, basketball, and capturing moments through my lens. 
+                    Currently exploring the world one line of code and one photo at a time.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-center gradient-text">About Me</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="card p-8 rounded-xl">
+                <h3 class="text-2xl font-semibold mb-4">Who Am I?</h3>
+                <p class="text-gray-300">
+                    I'm a 12th grader about to graduate in less than a year, standing at the exciting intersection of adolescence and adulthood. 
+                    My journey through high school has been filled with equations to solve, code to debug, games to play, 
+                    and moments worth capturing forever with my camera.
+                </p>
+            </div>
+            <div class="card p-8 rounded-xl">
+                <h3 class="text-2xl font-semibold mb-4">My Journey</h3>
+                <p class="text-gray-300">
+                    From solving algebra problems to discovering the beauty of web development, from chasing my dream on basketball 
+                    to exploring photography - each interest has shaped who I am today. As I prepare for 
+                    college, I'm excited to see where these passions will take me next.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <div class="divider max-w-6xl mx-auto"></div>
+    
+    <!-- Interests Section -->
+    <section id="interests" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 text-center gradient-text">My Interests</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Coding Card -->
+            <div class="card p-6 rounded-xl">
+                <div class="text-purple-400 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Coding</h3>
+                <p class="text-gray-300 text-sm">
+                    I love building things with code. Currently exploring web development (HTML, CSS, JavaScript) 
+                    and planning to dive deeper into computer science in college majoring in AI and Machine Learning.
+                </p>
+            </div>
+            
+            <!-- Math Card -->
+            <div class="card p-6 rounded-xl">
+                <div class="text-purple-400 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Math</h3>
+                <p class="text-gray-300 text-sm">
+                    Mathematics fascinates me with its perfect logic and problem-solving nature. 
+                    its not that i'll always know the answer but i love solving it.
+                </p>
+            </div>
+            
+            <!-- Basketball Card -->
+            <div class="card p-6 rounded-xl">
+                <div class="text-purple-400 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Basketball</h3>
+                <p class="text-gray-300 text-sm">
+                    Shooting hoops is my favorite way to unwind. Whether it's playing pick-up games with friends 
+                    or watching kyrie irving's highlights, basketball keeps me active and connected.
+                </p>
+            </div>
+            
+            <!-- Photography Card -->
+            <div class="card p-6 rounded-xl">
+                <div class="text-purple-400 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Photography</h3>
+                <p class="text-gray-300 text-sm">
+                    Capturing moments is my way of freezing time. I enjoy urban photography and candid shots 
+                    that tell stories without words. it's not a problem f i had no photo of myself, as long as my collegue had photos of them.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <div class="divider max-w-6xl mx-auto"></div>
+    
+    <!-- Photography Section -->
+    <section id="photos" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Photography Gallery</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Photo 1 -->
+            <div class="card overflow-hidden rounded-xl">
+                <img src="https://i.ibb.co/S7mq8KFy/Screenshot-2025-07-17-080055.png" alt="Urban cityscape at golden hour with warm tones and long shadows" class="w-full h-64 object-cover" />
+                <div class="p-4">
+                    <h3 class="text-lg font-medium">one of the dancer girl in a cultural event in semarang.</h3>
+                    <p class="text-gray-400 text-sm">captured with eos 60D 50mm - 250mm lens </p>
+                </div>
+            </div>
+            
+            <!-- Photo 2 -->
+            <div class="card overflow-hidden rounded-xl">
+                <img src="https://i.ibb.co/pjpJTHcy/Screenshot-2025-07-17-080403.png" alt="Basketball court at dusk with warm floodlights illuminating the scene" class="w-full h-64 object-cover" />
+                <div class="p-4">
+                    <h3 class="text-lg font-medium">a dancer girl elegantly throwing flowers</h3>
+                    <p class="text-gray-400 text-sm">this flower throwing embracing the elegance of their culture</p>
+                </div>
+            </div>
+            
+            <!-- Photo 3 -->
+            <div class="card overflow-hidden rounded-xl">
+                <img src="https://i.ibb.co/8LXQ3Tjg/image.png" alt="Abstract architecture details with strong geometric patterns" class="w-full h-64 object-cover" />
+                <div class="p-4">
+                    <h3 class="text-lg font-medium">in the middle of the mist, i found you</h3>
+                    <p class="text-gray-400 text-sm">somehow there's unexpected things we could find in the middle of this rough world.</p>
+                </div>
+            </div>
+            
+            <!-- Photo 4 -->
+            <div class="card overflow-hidden rounded-xl">
+                <img src="https://i.ibb.co/dJJf2ytJ/image.png" alt="Coffee cup on a math notebook with equations visible in soft morning light" class="w-full h-64 object-cover" />
+                <div class="p-4">
+                    <h3 class="text-lg font-medium">reliving the culture we have forgotten.</h3>
+                    <p class="text-gray-400 text-sm">culture is a priceless thing our ancestor have left us behind. keep it alive.</p>
+                </div>
+            </div>
+            
+            <!-- Photo 5 -->
+            <div class="card overflow-hidden rounded-xl">
+                <img src="https://i.ibb.co/fzPQdhbT/image.png" alt="Rainy street reflections at night with neon signs blurred in the background" class="w-full h-64 object-cover" />
+                <div class="p-4">
+                    <h3 class="text-lg font-medium">culture differences among human</h3>
+                    <p class="text-gray-400 text-sm">a lot of differences make the life more colorful isn't it?</p>
+                </div>
+            </div>
+            
+            <!-- Photo 6 -->
+            <div class="card overflow-hidden rounded-xl">
+                <img src="https://i.ibb.co/YBV7r6LL/image.png" alt="Close-up basketball textures showing scuffed leather and detailed stitching" class="w-full h-64 object-cover" />
+                <div class="p-4">
+                    <h3 class="text-lg font-medium">the complete photo</h3>
+                    <p class="text-gray-400 text-sm">this photo shows a complete substances of human.the dancer has made people more aware of the culture we actually forgotten</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="divider max-w-6xl mx-auto"></div>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto mb-20">
+        <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Get In Touch</h2>
+        <div class="card p-8 rounded-xl max-w-2xl mx-auto">
+            <h3 class="text-xl font-semibold mb-6 text-center">Want to connect?</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-purple-900 bg-opacity-50 p-3 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <a href="mailto:rizalhassya@gmail.com" class="text-gray-300 hover:text-white transition">mail me on rizalhassya@gmail.com</a>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <div class="bg-purple-900 bg-opacity-50 p-3 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 4a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <a href="https://www.linkedin.com/in/rizal-hassya-setyawan-04ba77374/" class="text-gray-300 hover:text-white transition" target="_blank">rizal hassya setyawan on Linkedin</a>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <div class="bg-purple-900 bg-opacity-50 p-3 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <a href="https://github.com/rizalsetyawan" class="text-gray-300 hover:text-white transition" target="_blank">rizalsetyawan on github</a>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <div class="bg-purple-900 bg-opacity-50 p-3 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                        </svg>
+                    </div>
+                    <a href="https://www.instagram.com/rizzl.rin/" class="text-gray-300 hover:text-white transition" target="_blank">@rizzl.rin on instagram</a>
+                </div>
+            </div>
+            <div class="text-center text-gray-400 text-sm">
+                Feel free to reach out about anything - NBA discussion, photography tips, or you could ask me to make you one of these kind of websites, or just to chat!
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-black bg-opacity-50 py-6 backdrop-blur-sm">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="text-gray-400 text-sm">
+                © 2025 Rizal 
+            </p>
+            
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Initialize particles.js background
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof particlesJS !== 'undefined') {
+                particlesJS('particles-js', {
+                    "particles": {
+                        "number": {
+                            "value": 80,
+                            "density": {
+                                "enable": true,
+                                "value_area": 800
+                            }
+                        },
+                        "color": {
+                            "value": "#9f7aea"
+                        },
+                        "shape": {
+                            "type": "circle",
+                            "stroke": {
+                                "width": 0,
+                                "color": "#000000"
+                            },
+                            "polygon": {
+                                "nb_sides": 5
+                            }
+                        },
+                        "opacity": {
+                            "value": 0.5,
+                            "random": false,
+                            "anim": {
+                                "enable": false,
+                                "speed": 1,
+                                "opacity_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "size": {
+                            "value": 3,
+                            "random": true,
+                            "anim": {
+                                "enable": false,
+                                "speed": 40,
+                                "size_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "line_linked": {
+                            "enable": true,
+                            "distance": 150,
+                            "color": "#805ad5",
+                            "opacity": 0.4,
+                            "width": 1
+                        },
+                        "move": {
+                            "enable": true,
+                            "speed": 2,
+                            "direction": "none",
+                            "random": false,
+                            "straight": false,
+                            "out_mode": "out",
+                            "bounce": false,
+                            "attract": {
+                                "enable": false,
+                                "rotateX": 600,
+                                "rotateY": 1200
+                            }
+                        }
+                    },
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": {
+                            "onhover": {
+                                "enable": true,
+                                "mode": "grab"
+                            },
+                            "onclick": {
+                                "enable": true,
+                                "mode": "push"
+                            },
+                            "resize": true
+                        },
+                        "modes": {
+                            "grab": {
+                                "distance": 140,
+                                "line_linked": {
+                                    "opacity": 1
+                                }
+                            },
+                            "bubble": {
+                                "distance": 400,
+                                "size": 40,
+                                "duration": 2,
+                                "opacity": 8,
+                                "speed": 3
+                            },
+                            "repulse": {
+                                "distance": 200,
+                                "duration": 0.4
+                            },
+                            "push": {
+                                "particles_nb": 4
+                            },
+                            "remove": {
+                                "particles_nb": 2
+                            }
+                        }
+                    },
+                    "retina_detect": true
+                });
+            }
+        });
+        
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+                nav.classList.add('bg-opacity-90');
+            } else {
+                nav.classList.remove('shadow-lg');
+                nav.classList.remove('bg-opacity-90');
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
